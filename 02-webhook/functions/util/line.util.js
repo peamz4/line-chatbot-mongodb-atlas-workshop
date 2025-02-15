@@ -1,4 +1,5 @@
 const axios = require("axios");
+// biome-ignore lint/style/useNodejsImportProtocol: <explanation>
 const crypto = require('crypto');
 
 
@@ -21,6 +22,7 @@ exports.getProfile = async (userId) => {
 
         if (response.status === 200) {
             return response.data
+        // biome-ignore lint/style/noUselessElse: <explanation>
         } else {
             throw new Error(`Failed to fetch user profile. API responded with status: ${response.status}`);
 
